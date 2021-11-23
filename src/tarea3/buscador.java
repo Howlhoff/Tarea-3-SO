@@ -4,7 +4,7 @@ import java.io.*;
 
 public class buscador {
 	public static void main(String[] args) throws Exception {
-        String archivo = "C:\\Users\\Diego\\Desktop\\Tarea-3-SO\\src\\tarea3\\palabras.txt";
+        String archivo = "palabras.txt";
         String cadena;
         FileReader f = new FileReader(archivo);
 		BufferedReader b = new BufferedReader(f);
