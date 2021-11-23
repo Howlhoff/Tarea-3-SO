@@ -2,21 +2,19 @@ import java.io.*;
 
 public class App {
 
-    public static void contenido(String archivo) throws FileNotFoundException, IOException{
+    public static void main(String[] args) throws Exception {
+        String archivo = "palabras.txt";
         String cadena;
         FileReader f = new FileReader(archivo);
         BufferedReader b = new BufferedReader(f);
         while((cadena = b.readLine())!=null){
-            String[] bar = cadena.split(" ");
+            //System.out.println(cadena);
+            String[] bar = cadena.split("\t");
             for(int i = 0; i < bar.length; i++){
                 if(bar[i] == "eiffel"){
-                    System.out.println(bar[i]);
+                    System.out.println("eiffel\n");
                 }
             }
         }
-    }
-
-    public static void main(String[] args) throws Exception {
-        contenido("/mnt/c/Users/Diego/Desktop/Tarea-3-SO/Tarea 3/src/palabras.txt");
     }
 }
