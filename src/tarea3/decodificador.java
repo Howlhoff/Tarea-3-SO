@@ -3,7 +3,7 @@ package tarea3;
 import java.io.*;
 import java.util.*;
 
-public class decodificador extends Thread{
+public class decodificador implements Runnable{
 
     public void run(){
         // Creacion de Map de Morse
