@@ -38,7 +38,7 @@ public class decodificador implements Runnable{
 
             long end = System.nanoTime();
 
-            double runtime = (double)(end-start);
+            double runtime = (double)(end-start)*1.0e-9;
 
             System.out.println("Tiempo de Ejecucion de Decodificador: " + runtime + " segundos.");
 

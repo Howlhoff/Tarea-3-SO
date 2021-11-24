@@ -40,7 +40,7 @@ public class buscador extends Thread{
 
             long end = System.nanoTime();
 
-            double runtime = (double)(end-start);
+            double runtime = (double)(end-start)*1.0e-9;
 
             System.out.println("Tiempo de Ejecucion de Buscador: " + runtime + " segundos.");
 		} catch (FileNotFoundException e) {
