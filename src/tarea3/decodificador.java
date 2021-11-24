@@ -7,7 +7,7 @@ public class decodificador implements Runnable{
 
     public void run(){
         // Creacion de Map de Morse
-        Map morse = new HashMap();
+        Map<String,String> morse = new HashMap<String,String>();
         String[] keys = {".-", "-...", "-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-",".._","..._",".--","-..-","-.--","--.."};
         String[] values = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
 
