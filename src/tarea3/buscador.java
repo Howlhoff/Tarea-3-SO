@@ -13,6 +13,7 @@ public class buscador extends Thread{
 		String archivo = "palabras.txt";
         String cadena;
         FileReader f;
+		System.out.println("Buscador: ");
 		try {
 			f = new FileReader(archivo);
 			BufferedReader b = new BufferedReader(f);

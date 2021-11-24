@@ -23,10 +23,12 @@ public class decodificador implements Runnable{
 			BufferedReader buff = new BufferedReader(fp);
 	        String line;
 	        String msg = "";
+            System.out.println("Decodificador: ");
             while ((line = buff.readLine()) != null){
                 String[] letras =  line.strip().split(" ");
                 for (int i = 0; i < letras.length; i++){
                     msg += morse.get(letras[i]);
+                    msg += " ";
                 }
             }
             System.out.println(msg);
