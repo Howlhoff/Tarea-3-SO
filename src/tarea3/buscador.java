@@ -2,6 +2,11 @@ package tarea3;
 
 import java.io.*;
 
+/*
+* Mensaje: Ahora que el buscador te funciono, hay que convertirlo en un Runnable. Pero cuando lo hice yo me dijo que habia un error 
+*          leyendo el archivo, asi que reverti esos cambiospara verlo dsps mientras hago los otros dos Runnables
+*/
+
 public class buscador {
 	public static void main(String[] args) throws Exception {
         String archivo = "palabras.txt";
