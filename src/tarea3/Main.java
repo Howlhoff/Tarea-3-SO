@@ -4,11 +4,11 @@ public class Main {
 
 	public static void main(String[] args) {
 		//set up para los runnables
-		tarea3.sumador suma = new sumador();
-		tarea3.decodificador decypher = new decodificador();
+		tarea3.Sumador suma = new Sumador();
+		tarea3.Decodificador decypher = new Decodificador();
 
 		//set up de threads
-		tarea3.buscador tarea1 = new buscador();
+		tarea3.Buscador tarea1 = new Buscador();
 		Thread tarea2 = new Thread(suma);
 		Thread tarea3 = new Thread(decypher);
 		

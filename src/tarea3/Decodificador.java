@@ -3,8 +3,11 @@ package tarea3;
 import java.io.*;
 import java.util.*;
 
-public class decodificador implements Runnable{
+public class Decodificador implements Runnable{
 
+    private  double runtime;
+
+    @Override
     public void run(){
         // Creacion de Map de Morse
         Map<String,String> morse = new HashMap<String,String>();
@@ -47,5 +50,13 @@ public class decodificador implements Runnable{
         }
         
     }
+
+    public void setRuntime(double t){
+		this.runtime = t;
+	}
+
+	public double getRuntime(double t){
+		return this.runtime;
+	}
     
 }

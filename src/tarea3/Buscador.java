@@ -7,13 +7,9 @@ import java.io.*;
 *          leyendo el archivo, asi que reverti esos cambiospara verlo dsps mientras hago los otros dos Runnables
 */
 
-public class buscador extends Thread{
+public class Buscador extends Thread{
 
-	private static int runtime;
-	
-	public buscador(){
-		this.runtime = 0;
-	}
+	private  double runtime;
 
 	@Override
 	public void run() {
@@ -47,7 +43,7 @@ public class buscador extends Thread{
 
             long end = System.nanoTime();
 
-            double runtime = (double)(end-start)*1.0e-9;
+            this.setRuntime((double)(end-start)*1.0e-9);
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -55,11 +51,11 @@ public class buscador extends Thread{
 		
 	}
 
-	public void setRuntime(int t){
+	public void setRuntime(double t){
 		this.runtime = t;
 	}
 
-	public int getRuntime(int t){
+	public double getRuntime(double t){
 		return this.runtime;
 	}
 	

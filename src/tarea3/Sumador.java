@@ -2,7 +2,9 @@ package tarea3;
 
 import java.io.*;
 
-public class sumador implements Runnable{
+public class Sumador implements Runnable{
+
+    private  double runtime;
 
     @Override
     public void run(){
@@ -41,5 +43,13 @@ public class sumador implements Runnable{
             e.printStackTrace();
         }
     }
+
+    public void setRuntime(double t){
+		this.runtime = t;
+	}
+
+	public double getRuntime(double t){
+		return this.runtime;
+	}
     
 }
