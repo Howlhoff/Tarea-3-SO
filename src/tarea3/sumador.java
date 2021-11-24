@@ -7,6 +7,8 @@ public class sumador implements Runnable{
     @Override
     public void run(){
         try {
+            long start = System.nanoTime();
+
             FileReader fp = new FileReader("numeros.txt");   
             BufferedReader buff = new BufferedReader(fp);
             Boolean flag = false;
@@ -28,8 +30,13 @@ public class sumador implements Runnable{
                     }
                 }
             }
-
             buff.close();
+
+            long end = System.nanoTime();
+
+            double runtime = (double)(end-start);
+
+            System.out.println("Tiempo de Ejecucion de Sumador: " + runtime + " segundos.");
         } catch (Exception e) {
             e.printStackTrace();
         }

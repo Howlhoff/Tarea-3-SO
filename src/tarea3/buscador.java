@@ -15,6 +15,8 @@ public class buscador extends Thread{
         FileReader f;
 
 		try {
+			long start = System.nanoTime();
+
 			f = new FileReader(archivo);
 			BufferedReader b = new BufferedReader(f);
 	        try {
@@ -35,6 +37,12 @@ public class buscador extends Thread{
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
+
+            long end = System.nanoTime();
+
+            double runtime = (double)(end-start);
+
+            System.out.println("Tiempo de Ejecucion de Buscador: " + runtime + " segundos.");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}

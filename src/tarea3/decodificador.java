@@ -18,6 +18,8 @@ public class decodificador implements Runnable{
 
         // Run Proper
         try {
+            long start = System.nanoTime();
+
             FileReader fp;
             fp = new FileReader("morse.txt");
 			BufferedReader buff = new BufferedReader(fp);
@@ -30,8 +32,16 @@ public class decodificador implements Runnable{
                 }
                 msg += " ";
             }
+
             System.out.println(msg);
             buff.close();
+
+            long end = System.nanoTime();
+
+            double runtime = (double)(end-start);
+
+            System.out.println("Tiempo de Ejecucion de Decodificador: " + runtime + " segundos.");
+
         } catch (Exception e) {
             e.printStackTrace();
         }
