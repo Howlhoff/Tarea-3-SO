@@ -2,7 +2,7 @@ package tarea3;
 
 import java.io.*;
 
-public class Sumador implements Runnable{
+public class Sumador extends Thread{
 
     private  double runtime;
 
@@ -36,9 +36,7 @@ public class Sumador implements Runnable{
 
             long end = System.nanoTime();
 
-            double runtime = (double)(end-start)*1.0e-9;
-
-            System.out.println("Tiempo de Ejecucion de Sumador: " + runtime + " segundos.");
+            this.setRuntime((double)(end-start)*1.0e-9);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -48,7 +46,7 @@ public class Sumador implements Runnable{
 		this.runtime = t;
 	}
 
-	public double getRuntime(double t){
+	public double getRuntime(){
 		return this.runtime;
 	}
     

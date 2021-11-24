@@ -3,7 +3,7 @@ package tarea3;
 import java.io.*;
 import java.util.*;
 
-public class Decodificador implements Runnable{
+public class Decodificador extends Thread{
 
     private  double runtime;
 
@@ -41,9 +41,7 @@ public class Decodificador implements Runnable{
 
             long end = System.nanoTime();
 
-            double runtime = (double)(end-start)*1.0e-9;
-
-            System.out.println("Tiempo de Ejecucion de Decodificador: " + runtime + " segundos.");
+            this.setRuntime((double)(end-start)*1.0e-9);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -55,7 +53,7 @@ public class Decodificador implements Runnable{
 		this.runtime = t;
 	}
 
-	public double getRuntime(double t){
+	public double getRuntime(){
 		return this.runtime;
 	}
     

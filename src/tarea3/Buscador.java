@@ -55,7 +55,7 @@ public class Buscador extends Thread{
 		this.runtime = t;
 	}
 
-	public double getRuntime(double t){
+	public double getRuntime(){
 		return this.runtime;
 	}
 	
