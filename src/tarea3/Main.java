@@ -15,9 +15,9 @@ public class Main {
 			//Aqui no pasa nada, solo se espera a que terminen los threads
 		}
 
-		System.out.println("Tiempo de Ejecucion de Buscador: " + task1.getRuntime());
-		System.out.println("Tiempo de Ejecucion de Sumador: " + task2.getRuntime());
-		System.out.println("Tiempo de Ejecucion de Decodificador: " + task3.getRuntime());
+		System.out.println("Tiempo de Ejecucion de Buscador: " + task1.getRuntime() + " segundos.");
+		System.out.println("Tiempo de Ejecucion de Sumador: " + task2.getRuntime() + " segundos.");
+		System.out.println("Tiempo de Ejecucion de Decodificador: " + task3.getRuntime() + " segundos.");
 	}
 
 }
