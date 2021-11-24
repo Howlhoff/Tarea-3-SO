@@ -10,7 +10,7 @@ import java.io.*;
 public class buscador extends Thread{
 	
 	public void run() {
-		String archivo = "C:\\Users\\Diego\\Desktop\\Tarea-3-SO\\src\\tarea3\\palabras.txt";
+		String archivo = "palabras.txt";
         String cadena;
         FileReader f;
 		try {
