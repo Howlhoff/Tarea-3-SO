@@ -8,7 +8,14 @@ import java.io.*;
 */
 
 public class buscador extends Thread{
+
+	private static int runtime;
 	
+	public buscador(){
+		this.runtime = 0;
+	}
+
+	@Override
 	public void run() {
 		String archivo = "palabras.txt";
         String cadena;
@@ -42,11 +49,18 @@ public class buscador extends Thread{
 
             double runtime = (double)(end-start)*1.0e-9;
 
-            System.out.println("Tiempo de Ejecucion de Buscador: " + runtime + " segundos.");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
 		
+	}
+
+	public void setRuntime(int t){
+		this.runtime = t;
+	}
+
+	public int getRuntime(int t){
+		return this.runtime;
 	}
 	
 
