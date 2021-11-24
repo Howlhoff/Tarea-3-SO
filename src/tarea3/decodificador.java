@@ -29,6 +29,7 @@ public class decodificador implements Runnable{
                     msg += morse.get(letras[i]);
                 }
             }
+            System.out.println(msg);
             buff.close();
         } catch (Exception e) {
             e.printStackTrace();
