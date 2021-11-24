@@ -17,35 +17,22 @@ public class decodificador implements Runnable{
 
 
         // Run Proper
-        FileReader fp;
-		try {
-			fp = new FileReader("C:\\Users\\Diego\\Desktop\\Tarea-3-SO\\src\\tarea3\\morse.txt");
+        try {
+            FileReader fp;
+            fp = new FileReader("morse.txt");
 			BufferedReader buff = new BufferedReader(fp);
 	        String line;
 	        String msg = "";
-
-	        try {
-				while ((line = buff.readLine()) != null){
-				    String[] letras =  line.strip().split(" ");
-				    for (int i = 0; i < letras.length; i++){
-				        msg += morse.get(letras[i]);
-				    }
-				}
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-
-	        try {
-				buff.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+            while ((line = buff.readLine()) != null){
+                String[] letras =  line.strip().split(" ");
+                for (int i = 0; i < letras.length; i++){
+                    msg += morse.get(letras[i]);
+                }
+            }
+            buff.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         
     }
     
