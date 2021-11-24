@@ -13,7 +13,7 @@ public class buscador extends Thread{
 		String archivo = "palabras.txt";
         String cadena;
         FileReader f;
-		System.out.println("Buscador: ");
+
 		try {
 			f = new FileReader(archivo);
 			BufferedReader b = new BufferedReader(f);
@@ -22,7 +22,7 @@ public class buscador extends Thread{
 				    String[] bar = cadena.split(" ");
 				    for(int i = 0; i < bar.length; i++){
 				        if(bar[i].equals("eiffel")) {
-				        	System.out.println(bar[i]);
+				        	System.out.println("Buscador: "+bar[i]);
 				        	break;
 				        }
 				    }
