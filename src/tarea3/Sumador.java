@@ -4,7 +4,7 @@ import java.io.*;
 
 public class Sumador extends Thread{
 
-    private  double runtime;
+    private double runtime;
 
     @Override
     public void run(){

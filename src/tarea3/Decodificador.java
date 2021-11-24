@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Decodificador extends Thread{
 
-    private  double runtime;
+    private double runtime;
 
     @Override
     public void run(){

@@ -9,7 +9,7 @@ import java.io.*;
 
 public class Buscador extends Thread{
 
-	private  double runtime;
+	private double runtime;
 
 	@Override
 	public void run() {
