@@ -15,8 +15,6 @@ public class Main {
 		tarea1.start();
 		tarea2.start();
 		tarea3.start();
-
-		
 	}
 
 }
