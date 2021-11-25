@@ -17,9 +17,9 @@ Especificaciones de archivos:
 
 Dentro de la carpeta src/tarea3 estan los siguientes archivos:
 
--> buscador.java Resuelve el problema de la busqueda de la palabra "eiffel"
--> decodificador.java Resuelve el problema de decodificar codigo morse
--> sumador.java Resuelve el problema de encontrar par de numeros que sumen 65
+-> Buscador.java Resuelve el problema de la busqueda de la palabra "eiffel"
+-> Decodificador.java Resuelve el problema de decodificar codigo morse
+-> Sumador.java Resuelve el problema de encontrar par de numeros que sumen 65
 -> Main.java Es el programa principal que asigna una hebra a un programa
 
 PD: El timer esta implementado dentro de los primeros 3 archivos java
