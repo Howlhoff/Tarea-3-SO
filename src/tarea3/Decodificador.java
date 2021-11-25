@@ -7,6 +7,10 @@ public class Decodificador extends Thread{
 
     private double runtime;
 
+    public Decodificador(){
+        this.runtime = 0;
+    }
+
     @Override
     public void run(){
         // Creacion de Map de Morse

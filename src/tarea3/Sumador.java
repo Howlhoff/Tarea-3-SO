@@ -6,6 +6,10 @@ public class Sumador extends Thread{
 
     private double runtime;
 
+    public Sumador(){
+		this.runtime = 0;
+	}
+
     @Override
     public void run(){
         try {

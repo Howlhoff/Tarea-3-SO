@@ -11,6 +11,10 @@ public class Buscador extends Thread{
 
 	private double runtime;
 
+	public Buscador(){
+		this.runtime = 0;
+	}
+
 	@Override
 	public void run() {
 		String archivo = "palabras.txt";
