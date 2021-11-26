@@ -9,14 +9,15 @@ import java.io.*;
 
 public class Buscador extends Thread{
 
-	private double runtime;
+	private double runtime; // guarda el valor del tiempo de ejecucion del thread, se usa al final de run
 
+	// constructor del thread Buscador
 	public Buscador(){
 		this.runtime = 0;
 	}
 
 	@Override
-	public void run() {
+	public void run() { // esta funcion es el programa que ha de correr el thread
 		String archivo = "palabras.txt";
         String cadena;
         FileReader f;
@@ -55,10 +56,12 @@ public class Buscador extends Thread{
 		
 	}
 
+	// funcion para settear el valor runtime del thread
 	public void setRuntime(double t){
 		this.runtime = t;
 	}
 
+	// funcion para obtener el valor runtime del thread
 	public double getRuntime(){
 		return this.runtime;
 	}

@@ -5,14 +5,15 @@ import java.util.*;
 
 public class Decodificador extends Thread{
 
-    private double runtime;
+    private double runtime; // guarda el valor del tiempo de ejecucion del thread, se usa al final de run
 
+    // constructo del thread Decodificador
     public Decodificador(){
         this.runtime = 0;
     }
 
     @Override
-    public void run(){
+    public void run(){ // esta funcion es el programa que ha de correr el thread
         // Creacion de Map de Morse
         Map<String,String> morse = new HashMap<String,String>();
         String[] keys = {".-", "-...", "-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
@@ -53,10 +54,12 @@ public class Decodificador extends Thread{
         
     }
 
+    // funcion para settear el valor runtime del thread
     public void setRuntime(double t){
 		this.runtime = t;
 	}
 
+    // funcion para obtener el valor runtime del thread
 	public double getRuntime(){
 		return this.runtime;
 	}

@@ -4,14 +4,15 @@ import java.io.*;
 
 public class Sumador extends Thread{
 
-    private double runtime;
+    private double runtime; // guarda el valor del tiempo de ejecucion del thread, se usa al final de run
 
+    // constructor del thread Buscador
     public Sumador(){
 		this.runtime = 0;
 	}
 
     @Override
-    public void run(){
+    public void run(){ // esta funcion es el programa que ha de correr el thread
         try {
             long start = System.nanoTime();
 
@@ -46,10 +47,12 @@ public class Sumador extends Thread{
         }
     }
 
+    // funcion para settear el valor runtime del thread
     public void setRuntime(double t){
 		this.runtime = t;
 	}
 
+    // funcion para obtener el valor runtime del thread
 	public double getRuntime(){
 		return this.runtime;
 	}
